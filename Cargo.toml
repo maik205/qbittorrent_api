@@ -1,7 +1,7 @@
 [package]
-name = "openapi"
+name = "qbittorrent_api"
 version = "2.11.3"
-authors = ["OpenAPI Generator team and contributors"]
+authors = ["OpenAPI Generator team and contributors", "qBittorrent developers", "qbittorrent-ecosystem"]
 description = "- All API methods are under `/api/v2/APIName/methodName`, where `APIName` is a certain subgroup of API methods whose functionality is related. - Either `GET` or `POST` can be used as the request type for all API methods. - All API methods require [authentication](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-5.0)#authentication) (except the `/api/v2/auth/login` method itself, obviously). "
 license = "GNU GPLv2"
 edition = "2021"
