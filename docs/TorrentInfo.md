@@ -1,0 +1,56 @@
+# TorrentInfo
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**added_on** | Option<**i64**> | Time (Unix Epoch) when the torrent was added to the client | [optional]
+**amount_left** | Option<**i64**> | Amount of data left to download (bytes) | [optional]
+**auto_tmm** | Option<**bool**> | Whether this torrent is managed by Automatic Torrent Management | [optional]
+**availability** | Option<**f32**> | Percentage of file pieces currently available | [optional]
+**category** | Option<**String**> | Category of the torrent | [optional]
+**completed** | Option<**i64**> | Amount of transfer data completed (bytes) | [optional]
+**completion_on** | Option<**i64**> | Time (Unix Epoch) when the torrent completed | [optional]
+**content_path** | Option<**String**> | Absolute path of torrent content (root path for multifile torrents, absolute file path for singlefile torrents) | [optional]
+**dl_limit** | Option<**i64**> | Torrent download speed limit (bytes/s). `-1` if ulimited. | [optional]
+**dlspeed** | Option<**i64**> | Torrent download speed (bytes/s) | [optional]
+**downloaded** | Option<**i64**> | Amount of data downloaded | [optional]
+**downloaded_session** | Option<**i64**> | Amount of data downloaded this session | [optional]
+**eta** | Option<**i64**> | Torrent ETA (seconds) | [optional]
+**f_l_piece_prio** | Option<**bool**> | True if first last piece are prioritized | [optional]
+**force_start** | Option<**bool**> | True if force start is enabled for this torrent | [optional]
+**hash** | Option<**String**> | Torrent hash | [optional]
+**last_activity** | Option<**i64**> | Last time (Unix Epoch) when a chunk was downloaded/uploaded | [optional]
+**magnet_uri** | Option<**String**> | Magnet URI corresponding to this torrent | [optional]
+**max_ratio** | Option<**f32**> | Maximum share ratio until torrent is stopped from seeding/uploading | [optional]
+**max_seeding_time** | Option<**i64**> | Maximum seeding time (seconds) until torrent is stopped from seeding | [optional]
+**name** | Option<**String**> | Torrent name | [optional]
+**num_complete** | Option<**i64**> | Number of seeds in the swarm | [optional]
+**num_incomplete** | Option<**i64**> | Number of leechers in the swarm | [optional]
+**num_leechs** | Option<**i64**> | Number of leechers connected to | [optional]
+**num_seeds** | Option<**i64**> | Number of seeds connected to | [optional]
+**priority** | Option<**i64**> | Torrent priority. Returns -1 if queuing is disabled or torrent is in seed mode | [optional]
+**progress** | Option<**f32**> | Torrent progress (percentage/100) | [optional]
+**ratio** | Option<**f32**> | Torrent share ratio. Max ratio value: 9999. | [optional]
+**ratio_limit** | Option<**f32**> | TODO (what is different from max_ratio?) | [optional]
+**reannounce** | Option<**i64**> | Time until the next tracker reannounce | [optional]
+**save_path** | Option<**String**> | Path where this torrent's data is stored | [optional]
+**seeding_time** | Option<**i64**> | Torrent elapsed time while complete (seconds) | [optional]
+**seeding_time_limit** | Option<**i64**> | TODO (what is different from `max_seeding_time`?) seeding_time_limit is a per torrent setting, when Automatic Torrent Management is disabled, furthermore then max_seeding_time is set to seeding_time_limit for this torrent. If Automatic Torrent Management is enabled, the value is -2. And if max_seeding_time is unset it have a default value -1. | [optional]
+**seen_complete** | Option<**i64**> | Time (Unix Epoch) when this torrent was last seen complete | [optional]
+**seq_dl** | Option<**bool**> | True if sequential download is enabled | [optional]
+**size** | Option<**i64**> | Total size (bytes) of files selected for download | [optional]
+**state** | Option<**State**> | Torrent state. See table here below for the possible values  | Value              | Description                                                   | | ------------------ | ------------------------------------------------------------- | | error              | Some error occurred, applies to paused torrents               | | missingFiles       | Torrent data files is missing                                 | | uploading          | Torrent is being seeded and data is being transferred         | | pausedUP           | Torrent is paused and has finished downloading                | | queuedUP           | Queuing is enabled and torrent is queued for upload           | | stalledUP          | Torrent is being seeded, but no connection were made          | | checkingUP         | Torrent has finished downloading and is being checked         | | forcedUP           | Torrent is forced to uploading and ignore queue limit         | | allocating         | Torrent is allocating disk space for download                 | | downloading        | Torrent is being downloaded and data is being transferred     | | metaDL             | Torrent has just started downloading and is fetching metadata | | pausedDL           | Torrent is paused and has NOT finished downloading            | | queuedDL           | Queuing is enabled and torrent is queued for download         | | stalledDL          | Torrent is being downloaded, but no connection were made      | | checkingDL         | Same as checkingUP, but torrent has NOT finished downloading  | | forcedDL           | Torrent is forced to downloading to ignore queue limit        | | checkingResumeData | Checking resume data on qBt startup                           | | moving             | Torrent is moving to another location                         | | unknown            | Unknown status                                                |  (enum: error, missingFiles, uploading, pausedUP, queuedUP, stalledUP, checkingUP, forcedUP, allocating, downloading, metaDL, pausedDL, queuedDL, stalledDL, checkingDL, forcedDL, checkingResumeData, moving, unknown) | [optional]
+**super_seeding** | Option<**bool**> | True if super seeding is enabled | [optional]
+**tags** | Option<**String**> | Comma-concatenated tag list of the torrent | [optional]
+**time_active** | Option<**i64**> | Total active time (seconds) | [optional]
+**total_size** | Option<**i64**> | Total size (bytes) of all file in this torrent (including unselected ones) | [optional]
+**tracker** | Option<**String**> | The first tracker with working status. Returns empty string if no tracker is working. | [optional]
+**up_limit** | Option<**i64**> | Torrent upload speed limit (bytes/s). `-1` if ulimited. | [optional]
+**uploaded** | Option<**i64**> | Amount of data uploaded | [optional]
+**uploaded_session** | Option<**i64**> | Amount of data uploaded this session | [optional]
+**upspeed** | Option<**i64**> | Torrent upload speed (bytes/s) | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
